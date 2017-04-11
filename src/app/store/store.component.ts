@@ -39,8 +39,8 @@ export class StoreComponent implements OnInit {
         this.changePage(1);
     }
 
-    get pageNumbers(): number[] {
+    get pageCount(): number {
         let pageCount = this.repository.getProducts(this.selectedCategory).length / this.productsPerPage;
-        return Array(Math.ceil(pageCount)).fill(0).map((x, i) => i + 1);
+        return Math.ceil(pageCount);
     }
 }

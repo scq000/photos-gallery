@@ -32,7 +32,7 @@
     </div>
 
     <div class="btn-group pull-xs-right">
-        <button class="btn btn-outline-primary" *ngFor="let page of pageNumbers" (click)="changePage(page)" [class.active]="page === selectedPage">
+        <button class="btn btn-outline-primary" *counter="let page of pageCount" (click)="changePage(page)" [class.active]="page === selectedPage">
             {{page}}
         </button>
     </div>

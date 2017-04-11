@@ -21,4 +21,19 @@
             {{product.description}}
         </div>
     </div>
+
+    <div class="form-inline pull-xs-left m-r-1">
+        <select class="form-control" [value]="productsPerPage" (change)="changePageSize($event.target.value)">
+            <option value="3">3 per page</option>
+            <option value="5">5 per page</option>
+            <option value="7">7 per page</option>
+            <option value="9">9 per page</option>
+        </select>
+    </div>
+
+    <div class="btn-group pull-xs-right">
+        <button class="btn btn-outline-primary" *ngFor="let page of pageNumbers" (click)="changePage(page)" [class.active]="page === selectedPage">
+            {{page}}
+        </button>
+    </div>
 </div>

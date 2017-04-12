@@ -5,7 +5,7 @@
   {{errorMessage}}
 </div>
 <div class="p-a-1">
-  <form novalidate #form="ngForm" (onSubmit)="authenticate(form)">
+  <form novalidate #form="ngForm" (ngSubmit)="authenticate(form)">
     <div class="form-group">
       <label>Name</label>
       <input required class="form-control" name="username" [(ngModel)]="username"/>

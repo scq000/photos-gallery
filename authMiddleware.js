@@ -4,11 +4,13 @@ const APP_SECRET = 'secret';
 const USERNAME = 'admin';
 const PASSWORD = '12345';
 
-module.exports = function (req, res, next) {
+var jsonServer = require('json-server');
 
-    if(req.url === 'login' && req.method === 'POST') {
-        if(req.body.name === USERNAME && req.body.password === PASSWORD) {
-            let token = jwt.sign({ data: USERNAME, expiresIn: '1h' }, APP_SECRET);
+module.exports = function (req, res, next) {
+  console.log(req.body);
+  if (req.url === '/login' && req.method === 'POST') {
+    if (req.body && req.body.name === USERNAME && req.body.password === PASSWORD) {
+      const token = jwt.sign({data: USERNAME, expiresIn: '1h'}, APP_SECRET);
             res.json({ success: true, token: token });
         } else {
             res.json({ success: false});
@@ -32,4 +34,4 @@ module.exports = function (req, res, next) {
         return;
     }
     next();
-}
+};

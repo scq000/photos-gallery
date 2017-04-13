@@ -8,8 +8,11 @@ import {AuthGuard} from './auth.guard';
 
 const routing = RouterModule.forChild([
   {path: 'auth', component: AuthComponent},
-  {path: 'main', component: AdminComponent, canActivate: [AuthGuard]},
-  {path: '**', redirectTo: 'auth'}
+  {
+    path: 'main', component: AdminComponent, canActivate: [AuthGuard],
+    children: []
+  },
+  {path: '**', redirectTo: 'auth'},
 ]);
 
 @NgModule({

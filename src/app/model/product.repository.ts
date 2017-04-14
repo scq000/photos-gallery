@@ -11,7 +11,7 @@ export class ProductRepository {
     dataSource.getProducts().subscribe(data => {
       this.products = data;
       this.categories = data.map(p => p.category)
-        .filter((c, index, array) => array.indexOf(c) == index).sort();
+        .filter((c, index, array) => array.indexOf(c) === index).sort();
     });
   }
 
@@ -45,3 +45,4 @@ export class ProductRepository {
     return this.categories;
   }
 }
+

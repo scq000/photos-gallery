@@ -8,6 +8,7 @@ var jsonServer = require('json-server');
 
 module.exports = function (req, res, next) {
   console.log(req.body);
+  console.log(req.url);
   if (req.url === '/login' && req.method === 'POST') {
     if (req.body && req.body.name === USERNAME && req.body.password === PASSWORD) {
       const token = jwt.sign({data: USERNAME, expiresIn: '1h'}, APP_SECRET);
@@ -19,7 +20,7 @@ module.exports = function (req, res, next) {
         return;
     } else if((req.url.startsWith('/products') && req.method !== 'GET') || (req.url.startsWith('/orders') && req.method !== 'POST')) {
         let token = req.headers['authorization'];
-        if(token !== null && token.startsWith('Bearer<')) {
+    if (token && token.startsWith('Bearer<')) {
             token = token.substring(7, token.length - 1);
             try {
                 jwt.verify(token, APP_SECRET);

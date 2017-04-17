@@ -20,7 +20,7 @@ export class CheckoutComponent {
       this.repository.saveOrder(this.order).subscribe(order => {
         this.order.clear();
         this.orderSend = true;
-        this.submitted = true;
+        this.submitted = false;
       });
     }
   }

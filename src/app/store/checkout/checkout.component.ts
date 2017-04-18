@@ -9,8 +9,8 @@ import {NgForm} from '@angular/forms';
   styleUrls: ['./checkout.component.css']
 })
 export class CheckoutComponent {
-  private submitted: boolean = false;
-  private orderSend: boolean = false;
+  public submitted: boolean = false;
+  public orderSend: boolean = false;
 
   constructor(public repository: OrderRepository, public order: Order) { }
 

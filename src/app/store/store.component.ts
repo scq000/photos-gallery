@@ -1,13 +1,12 @@
-import { Component,OnInit } from '@angular/core';
-import { Product } from '../model/product.model';
-import { ProductRepository } from '../model/product.repository';
-import { Cart } from '../model/cart.model';
-import { Router } from '@angular/router';
+import {Component, OnInit} from '@angular/core';
+import {Product} from '../model/product.model';
+import {ProductRepository} from '../model/product.repository';
+import {Cart} from '../model/cart.model';
+import {Router} from '@angular/router';
 
 @Component({
     selector: 'store',
     templateUrl: './store.component.html',
-    styleUrls: ['./store.component.css']
 })
 export class StoreComponent implements OnInit {
     public selectedCategory = null;

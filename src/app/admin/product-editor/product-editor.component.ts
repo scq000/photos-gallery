@@ -7,7 +7,6 @@ import {NgForm} from '@angular/forms';
 @Component({
   selector: 'app-product-editor',
   templateUrl: './product-editor.component.html',
-  styleUrls: ['./product-editor.component.css']
 })
 export class ProductEditorComponent {
 

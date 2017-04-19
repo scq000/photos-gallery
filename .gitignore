@@ -4,6 +4,7 @@
 /dist
 /tmp
 /out-tsc
+/aot
 
 # dependencies
 /node_modules
@@ -44,3 +45,7 @@ Thumbs.db
 # AOT File
 *.ngfactory.ts
 *.module.metadata.json
+aot
+
+# Erro File
+yarn-error.log

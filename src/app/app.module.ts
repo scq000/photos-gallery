@@ -37,7 +37,7 @@ import {OrderTableComponent} from './admin/order-table/order-table.component';
             {path: 'products/:mode/:id', component: ProductEditorComponent},
             {path: 'products/:mode', component: ProductEditorComponent},
             {path: 'products', component: ProductTableComponent},
-            {path: 'Orders', component: OrderTableComponent},
+            {path: 'orders', component: OrderTableComponent},
             {path: '**', redirectTo: 'products'},
           ]
           },

@@ -1,7 +1,7 @@
 
 # SportStore
 
-该项目是[Pro Angular2]书中的演示项目，我又手动实现了一遍。项目初始化时采用了[Angular CLI]((https://github.com/angular/angular-cli)脚手架。
+该项目是[Pro Angular2]书中的演示项目，我又手动实现了一遍。项目初始化时采用了[Angular CLI](https://github.com/angular/angular-cli)脚手架。
 
 
 ## Development server 开发服务器

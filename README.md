@@ -1,28 +1,32 @@
+
 # SportStore
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
+该项目是[Pro Angular2]书中的演示项目，我又手动实现了一遍。项目初始化时采用了[Angular CLI]((https://github.com/angular/angular-cli)脚手架。
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Development server 开发服务器
 
-## Code scaffolding
+前端服务器会允许在4200端口上，使用`npm run serve`后启动。后台数据我采用了`json-server`库来实现，因此需要先运行`npm run json`后启动该后台服务器，该服务器允许在3500端口上，用于mock数据。
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class/module`.
+## Run Project 运行项目
 
-## Build
+在命令行中输入`npm run start`会同时启动服务端和客户端，你也可以分别启动`npm run serve`和`npm run json`。然后访问`http://localhost:4200`。
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+## Build 打包
 
-## Running unit tests
+Run `npm run bundle` to build the project, which will use the rollup to bundle.
+使用`npm run bundle`去打包项目，采用rollup来去除冗余代码。
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## 项目截图
+首页
 
-## Running end-to-end tests
+![homepage.png](images/homepage.png)
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
+用户认证页
 
-## Further help
+![admin.png](images/admin.png)
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+用户管理页
+
+![admin-manager.png](images/admin-manager.png)
